@@ -270,14 +270,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# End of the current block&amp;#10;dev.activate_line(bitmask=block_end_code)&amp;#10;eyetracker.sendMessage(block_end_code)&amp;#10;&amp;#10;if blocks.thisRepN &gt; 0:&amp;#10;    # skip this routine if not immediately after the practice round&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# End of the current block&amp;#10;dev.activate_line(bitmask=block_end_code)&amp;#10;eyetracker.sendMessage(block_end_code)&amp;#10;# no need to wait 500ms if experiment ending since we have thank you routine&amp;#10;&amp;#10;if blocks.thisRepN &gt; 0:&amp;#10;    # skip this routine if not immediately after the practice round&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if blocks.thisRepN &lt; n_blocks:&amp;#10;    # Start of the next block&amp;#10;    core.wait(0.5)  # wait 500ms between two consecutive triggers&amp;#10;    dev.activate_line(bitmask=block_start_code)&amp;#10;    eyetracker.sendMessage(block_start_code)&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if blocks.thisRepN &lt; n_blocks:&amp;#10;    # Start of the next block&amp;#10;    core.wait(0.5)  # wait 500ms after the block_end_code triggers&amp;#10;    dev.activate_line(bitmask=block_start_code)&amp;#10;    eyetracker.sendMessage(block_start_code)&amp;#10;    # no need to wait 500ms again as we have a 5.0s rest period before video triggers&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="skip_routine" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -350,7 +350,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Start of practice block&amp;#10;dev.activate_line(bitmask=block_start_code)&amp;#10;eyetracker.sendMessage(block_start_code)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# Start of practice block&amp;#10;dev.activate_line(bitmask=block_start_code)&amp;#10;eyetracker.sendMessage(block_start_code)&amp;#10;# no need to wait 500ms as we have a 5.0s rest period before video triggers&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
