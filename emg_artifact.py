@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.5),
-    on Tue Jun 25 19:53:32 2024
+    on Sun Jun 30 07:52:31 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -95,7 +95,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [2560, 1440]
+_winSize = [1728, 1117]
 _loggingLevel = logging.getLevel('warning')
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
@@ -1264,6 +1264,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start of practice block
     dev.activate_line(bitmask=block_start_code)
     eyetracker.sendMessage(block_start_code)
+    # no need to wait 500ms as we have a 5.0s rest period before video triggers
     
     # keep track of which components have finished
     instruct_pracComponents = [text_instruct_practice, key_instruct_practice]
@@ -1758,6 +1759,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # End of the current block
         dev.activate_line(bitmask=block_end_code)
         eyetracker.sendMessage(block_end_code)
+        # no need to wait 500ms since we have thank you routine before experiment ends
         
         if blocks.thisRepN > 0:
             # skip this routine if not immediately after the practice round
@@ -1859,9 +1861,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'End Routine' code from skip_routine
         if blocks.thisRepN < n_blocks:
             # Start of the next block
-            core.wait(0.5)  # wait 500ms between two consecutive triggers
+            core.wait(0.5)  # wait 500ms after the block_end_code triggers
             dev.activate_line(bitmask=block_start_code)
             eyetracker.sendMessage(block_start_code)
+            # no need to wait 500ms again as we have a 5.0s rest period before video triggers
         
         # the Routine "instruct_begin" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
