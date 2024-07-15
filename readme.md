@@ -2,7 +2,7 @@
 Last edit: 06/30/2024
 
 ## Edit history
-06/30/2024 by Alex He - created finalized first draft version
+- 06/30/2024 by Alex He - created finalized first draft version
 
 ## Description
 This task is used to elicit a few canonical muscle artifacts as captured in EEG recording channels. By following short video clips of an experimenter demonstrating a series of facial movements, subjects will repeat the below motions:
