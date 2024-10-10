@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.2a1),
-    on Thu Oct 10 14:18:50 2024
+    on Thu Oct 10 14:41:11 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -662,7 +662,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instruct_prac" ---
     text_instruct_practice = visual.TextStim(win=win, name='text_instruct_practice',
-        text='INSTRUCTIONS:\n\nThere will be a practice round to familiarize you with all of the movements and the timing of the trials. This will be followed by 2 rounds of actual trials.\n\nPlease try to mimic the facial expressions that you see as accurately as you can.\n\n\nPress any of the white keys to begin',
+        text='INSTRUCTIONS:\n\nThere will be a practice round to familiarize you with all of the movements and the timing of the trials. This will be followed by 2 rounds of actual trials.\n\nPlease try to mimic the facial expressions that you see as accurately as you can.\n\n\nPress the green key to begin',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -709,7 +709,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instruct_begin" ---
     text_instruct_begin = visual.TextStim(win=win, name='text_instruct_begin',
-        text='INSTRUCTIONS:\n\nThis is the end of the practice round. We will now begin two actual rounds of trials. Please watch the facial expression in each short video and mimic that movement until you hear a beep.\n\n\nPress any of the white keys to begin the task',
+        text='INSTRUCTIONS:\n\nThis is the end of the practice round. We will now begin two actual rounds of trials. Please watch the facial expression in each short video and mimic that movement until you hear a beep.\n\n\nPress the green key to begin the task',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1621,7 +1621,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             win.callOnFlip(key_instruct_practice.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(key_instruct_practice.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if key_instruct_practice.status == STARTED and not waitOnFlip:
-            theseKeys = key_instruct_practice.getKeys(keyList=['3', '4', '5', '6'], ignoreKeys=["escape"], waitRelease=True)
+            theseKeys = key_instruct_practice.getKeys(keyList=['1'], ignoreKeys=["escape"], waitRelease=True)
             _key_instruct_practice_allKeys.extend(theseKeys)
             if len(_key_instruct_practice_allKeys):
                 key_instruct_practice.keys = _key_instruct_practice_allKeys[-1].name  # just the last key pressed
@@ -2263,7 +2263,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 win.callOnFlip(key_instruct_begin.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(key_instruct_begin.clearEvents, eventType='keyboard')  # clear events on next screen flip
             if key_instruct_begin.status == STARTED and not waitOnFlip:
-                theseKeys = key_instruct_begin.getKeys(keyList=['3', '4', '5', '6'], ignoreKeys=["escape"], waitRelease=True)
+                theseKeys = key_instruct_begin.getKeys(keyList=['1'], ignoreKeys=["escape"], waitRelease=True)
                 _key_instruct_begin_allKeys.extend(theseKeys)
                 if len(_key_instruct_begin_allKeys):
                     key_instruct_begin.keys = _key_instruct_begin_allKeys[-1].name  # just the last key pressed
