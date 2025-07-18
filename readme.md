@@ -1,7 +1,8 @@
 # Electromyography (EMG) artifact task
-Last edit: 11/22/2024
+Last edit: 07/17/2025
 
 ## Edit history
+- 07/17/2025 by Alex He - enabled flexible connection to both Cedrus C-POD and M-POD
 - 11/22/2024 by Alex He - removed summary csv saving since no trialList used
 - 10/24/2024 by Alex He - added a print message of task ID at the onset of task
 - 10/12/2024 by Alex He - increased logging granularity from warning to debug (maximal level)
